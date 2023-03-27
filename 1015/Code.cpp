@@ -1,7 +1,7 @@
 class Solution {
 public:
     int smallestRepunitDivByK(int k) {
-        unsigned long long sum=0;
+        int sum=0;
         for(int i=0 ; i<k ; i++)
         {
             sum = (sum*10 +1)%k;
