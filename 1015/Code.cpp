@@ -7,6 +7,7 @@ public:
             sum = (sum*10 +1)%k;
             if(sum ==0 ) return i+1; 
         }
+        
         return -1;
     }
 };
