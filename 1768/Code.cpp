@@ -15,6 +15,7 @@ public:
                 ans += word2[st2];
                 st2++;
             }
+            
         }
         return ans;
     }
