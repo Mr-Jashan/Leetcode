@@ -32,25 +32,10 @@ public:
         ListNode* head = NULL;
         if(temp1==NULL && temp2!=NULL) return temp2;
         if(temp1!=NULL && temp2==NULL) return temp1;
-        while(temp1!=NULL || temp2!=NULL)
+        while(temp1!=NULL && temp2!=NULL)
         {
-            if(temp1 == NULL) 
-            {
-                while(temp2!=NULL)
-                {
-                    in(head, temp2->val);
-                    temp2 = temp2->next;
-                }
-            }
-            else if(temp2 == NULL) 
-            {
-                while(temp1!=NULL)
-                {
-                    in(head, temp1->val);
-                    temp1 = temp1->next;
-                }
-            }
-            else if(temp1->val < temp2->val)
+            
+            if(temp1->val < temp2->val)
             {
                 in(head, temp1->val);
                 temp1 = temp1->next;
@@ -67,6 +52,16 @@ public:
                 temp1 = temp1->next;
                 temp2 = temp2->next;
             }
+        }
+        while(temp2!=NULL)
+        {
+            in(head, temp2->val);
+            temp2 = temp2->next;
+        }
+        while(temp1!=NULL)
+        {
+            in(head, temp1->val);
+            temp1 = temp1->next;
         }
         return head;
     }
