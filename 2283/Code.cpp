@@ -10,6 +10,7 @@ public:
         {
             if(map[i] != num[i] - '0') return false;
         }
+        
         return true;
     }
 };
